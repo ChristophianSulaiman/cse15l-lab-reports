@@ -28,3 +28,9 @@ P.S: Make sure you type this in your workstation and not ieng6!!
 Sadly, I didn't save the screenshot of me running the commands to activate my account without password, however saved a screenshot of proof that I could login to my ieng6 account without password and with a passphrase instead since I set one up. Basically, to do this step you'd want to use ssh-keygen and press enter when they ask you where to save the key (there are more steps for windows posted on the assignment page).
 
 ## Step 6: Optimizing your remote running:
+![Image](last%202.png)
+
+You could write commands in quotes at the end of an ssh command. This will run it on a remote server and then exit. Example is shown on image above. Another, is that you can use semicolons to run multiple commands on the same line of command. 
+
+
+## **That would be all for week 1's lab report!**
