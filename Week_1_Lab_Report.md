@@ -25,7 +25,7 @@ P.S: Make sure you type this in your workstation and not ieng6!!
 ## Step 5: Setting an SSH Key
 ![Image](CS15LLL.png)
 
-Sadly, I didn't save the screenshot of me running the commands to activate my account without password, however saved a screenshot of proof that I could login to my ieng6 account without password and with a passphrase instead since I set one up. Basically, to do this step you'd want to use ssh-keygen and press enter when they ask you where to save the key (there are more steps for windows posted on the assignment page).
+Sadly, I didn't save the screenshot of me running the commands to activate my account without password, however saved a screenshot of proof that I could login to my ieng6 account without password and with a passphrase instead since I set one up. Basically, to do this step you'd want to use ssh-keygen and press enter when they ask you where to save the key. There will be an option as to if you'd like to add a "passphrase", which I personally did since it is always great for extra security. Then you can call mkdir .ssh, and copy it to your local device using the scp command. Just like that, you could now login to your remote server without entering your password again. One thing I'd like to highlight is that you should probably set your passphrase (if you have one) as an easier phrase to type than your password for convenience.
 
 ## Step 6: Optimizing Remote Running:
 ![Image](last%202.png)
