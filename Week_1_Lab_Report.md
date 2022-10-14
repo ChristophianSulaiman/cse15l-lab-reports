@@ -1,15 +1,17 @@
 # **Week 1 Lab Report**
+Christophian Austin Sulaiman
+
 Hello, this is my week 1 lab report!
 
 ## Step 1: Installing Visual Studio Code:
 ![Image](VsCode%20setup-%20Christophian.png)
 
-So in here, I have installed visual studio code. To install VSC, you go to their website and follow the instructions given based on the operating system you use. In my case, it is Windowns.
+So in here, I have installed visual studio code. To install VSC, you go to their [website](https://code.visualstudio.com/) and follow the instructions given based on the operating system you use. In my case, it is Windowns.
 
 ## Step 2: Remotely Connecting:
 ![Image](ssh%20cs15l.png)
 
-In this step, we are connecting to the super computers of UCSD called ieng6. Firstly if you use windows like me, please install OpenSSH, if you use an OSX device, simply use your terminal. Type "ssh cs15lfa22xx@ieng6.ucsd.edu", where xx is the last 2 digits of your own account, to log in to ieng6 through your terminal. If they ask you about a fingerprint the first time you log in, type "yes".
+In this step, we are connecting to the super computers of UCSD called ieng6. Firstly if you use windows like me, please install OpenSSH via [this website](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui), if you use an OSX device, simply use your terminal. Type "ssh cs15lfa22xx@ieng6.ucsd.edu", where xx is the last 2 digits of your own account, to log in to ieng6 through your terminal. If they ask you about a fingerprint the first time you log in, type "yes".
 
 ## Step 3: Trying Some Commands: 
 ![Image](cse15l%203.png)
