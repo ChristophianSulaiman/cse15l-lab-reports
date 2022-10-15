@@ -18,6 +18,16 @@ class Handler implements URLHandler {
         
         if (url.getPath().equals("/")) {
             return String.format("The words you have up until now are: " + strings);
+        } else if (url.getPath().equals("/search")) {
+            String[] parameters = url.getQuery().split("=");
+            if (parameters[0].equals("s")) {
+                for (int i = 0; i < strings.size(); i++) {
+                    if (strings.get(i).contains(parameters[1])) {
+                        temp.add(strings.get(i));
+                    }
+                }
+                return String.format("This is the list of words related to your search: " + temp);
+            }
         } else if (url.getPath().equals("/add")) {
             String[] parameters = url.getQuery().split("=");
             if (parameters[0].equals("s")) {
@@ -29,21 +39,12 @@ class Handler implements URLHandler {
                 strings.add(parameters[1]);
                 return String.format("%s is successfully added to the list!", parameters[1]);
             }
-        } else if (url.getPath().equals("/search")) {
-            String[] parameters = url.getQuery().split("=");
-            if (parameters[0].equals("s")) {
-                for (int i = 0; i < strings.size(); i++) {
-                    if (strings.get(i).contains(parameters[1])) {
-                        temp.add(strings.get(i));
-                    }
-                }
-                return String.format("This is the list of words related to your search: " + temp);
-            }
         }
         return "404 Not Found!";
     
     }
 }
+
 class SearchEngine {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
