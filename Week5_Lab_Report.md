@@ -2,9 +2,9 @@
 **By Christophian Austin Sulaiman**
 
 
-**I will be choosing the less command for this lab report**
+**I will be choosing the find command for this lab report**
 
-3 Interesting command-line options or alternate ways to use the less command:
+3 Interesting command-line options or alternate ways to use the find command:
     
 First is: The -name command-line option.
 below is the example of me using command-line options to the command find in the linux command. The first would be "-name" this searches for a file with the name given to the command. This is a very popular command to use to search for certain files with the name you'd want to search for. The second command is the -size command. Find -size would give a list of files in a certain directory that has the exact memory space of the given value from the user. This could be used when wanting to delete files that take up too much space. The final and last one is find -type d where you would be given the type of directory that is given by user. This would be useful for finding where a directory is inside a directory.
