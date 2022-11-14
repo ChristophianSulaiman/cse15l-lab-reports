@@ -9,24 +9,43 @@ We can do this in under 30 key presses by doing these individual key-presses (us
 I will be explaining what each shortcut does.
 
 `Vim DocSearchServer.java` (For this, we will be entering the normal mode for the vim of DocSearchServer.java)
+
 `<Enter>`
+
 `/start` (This command is used to search through the file DocSearchServer for any "start" in it)
+
 `<Enter>`
+
 `ce` (This command is used to delete the word your editing cursor is at (which in this case will be "start"))
+
 `I (insert)` (This is to enter insert mode in VIM)
+
 `Type “base”` (Here we are just typing the replacement word)
+
 `<esc>` (esc to go back to normal mode)
+
 `n` (n is to cycle through the word "start" again, from top to bottom)
+
 `ce`
+
 `Insert(I)`
+
 `Type “base”`
+
 `<esc>`
+
 `n`
+
 `ce`
+
 `Insert(I)`
+
 `Type “base”`
+
 `<esc>`
+
 `:wq` (this is to save and exit the vim file)
+
 `<Enter>`
 
 This is 19 total key presses, which is reduced significantly using some useful vim shortcuts.
