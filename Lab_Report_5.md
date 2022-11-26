@@ -26,11 +26,11 @@ fi
 
 **Images of the three localhost**
 
-![Image](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/Phian%201.png)
+![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%2011.png)
 
-![Image](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/Phian%202.png)
+![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%2022.png)
 
-![Image](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/Phian%203.png)
+![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%2033.png)
 
 
 I will be tracing the script for the first image out of the three above:
