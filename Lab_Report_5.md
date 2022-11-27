@@ -49,11 +49,11 @@ fi
 
 **Images of the three localhost**
 
-![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/cse15l%20first.jpg)
+![Image](FIRST.jpg)
 
-![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/cse15l%20second.png)
+![Image](SECOND.png)
 
-![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%20ss3.png)
+![Image](THIRD.png)
 
 I will be tracing the script for the second image out of the three above:
 
@@ -80,5 +80,3 @@ OK (2 tests)
 Grade: 100%
 ```
 Everything ran smoothly and the file out-error.txt is empty. The standard output has an exit code of 0, which indicates that everything ran smoothly. Everything printed indicates all ran smoothly, and that for the last 2 if statements, the trace runs the first condition for both.
-
-[def]: ../../../Desktop/cse15l%20third.png
