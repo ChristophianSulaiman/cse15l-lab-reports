@@ -1,55 +1,82 @@
 #  Lab report 5: by Christophian Austin Sulaiman
 ```
-temp=student-grade/
+# Create your grading script here
+FILE='ListExamples.java'
 rm -rf student-submission
-rm -rf $temp
 git clone $1 student-submission
-CP=.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar
-mkdir $temp
-cp ./student-submission/ListExamples.java $temp
-cp TestListExamples.java $temp
-cp -r lib $temp
-cd $temp
+echo 'Finished cloning'
 
-javac -cp $CP *.java
-java -cp $CP org.junit.runner.JUnitCore TestListExamples.java 2> error-output.txt
-
-javac ListExamples.java
-
-if [ $? -eq 0 ];
- then
-    echo "It was a success"
+cd student-submission
+if [ -f $FILE ]
+then
+    echo "Found the file!"
 else
-    echo "It was a failure"
+    echo "Could not find the file!"
+    echo "The grade is 0%"
+    exit 1
+fi
+
+cp ../TestListExamples.java .
+
+javac -cp .:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar *.java 2> out-error.txt
+
+if [ $? -eq 0 ]
+then
+    echo "Compiled successfully"
+else
+    echo "Compile failed"
+    cat out-error.txt
+    echo "Grade received is 0%"
+    exit 1
+fi
+
+
+java -cp .:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples > test-result.txt
+
+
+if [ $? -eq 0 ]
+then
+    echo "JUnit results for the tests are below:"
+    cat test-result.txt
+    echo "Grade: 100%"
+else
+    echo "JUnit results for the tests are below:"
+    cat test-result.txt
+    echo "Grade: 50%"
+    exit 1
 fi
 ```
 
 **Images of the three localhost**
 
-![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%2011.png)
+![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%20ss1.png)
 
-![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%2022.png)
+![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%20ss2.png)
 
-![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%2033.png)
+![Alt text](../../../../../../C:/Users/Christophian%20S/Documents/GitHub/cse15l-lab-reports/phian%20ss3.png)
 
+I will be tracing the script for the second image out of the three above:
 
-I will be tracing the script for the first image out of the three above:
+Firstly. I'd like to mention that I did not use a variable to store the command for compiling, which could have been done to enhance the program's efficiency. I started off by creating a FILE variable for ListExamples.java. Then the rm command will remove the directory student-submission if it already exists since we may run the code more than once, which was a success with an exit code of 0. Next, I git cloned the link that the user will provide into the directory student-submission, and I printed "Finished cloning" after the git clone ran successfully for this trace. 
 
+I then moved working directory to student-submission using the cd command, and then for the first if statement, we searched if the FILE exists, if it does then "Found the file!" is printed and the exit code remains 0 (correct), otherwise an error output is printed and that the grade is 0%, along with an error code of 1 which indicates an error. The file does exist for this tracing, and so it ran smoothly without an exit code that isn't a 0. 
 
+Next we cp, which ran successfully, and then we compiled every java file and if an error occurs, we re-direct the error into out-error.txt. For the if statement, we check whether or not the value is a 0 or otherwise, if 0 it is a success, and will print out that it compiled successfully, otherwise will print compile failed and will give the contents of the error text file and will give an exit code of 1, which represents an error. In this case, this step was a success with an exit code of 0 and the contents of out-error.txt has been updated. 
 
-For the first link that I've used, the rm file will remove that directory or file for every time the grade.sh is used. So everytime, there will be a new student-submission and student-grade/. This stage, there are no errors and the exit code would be 0. For the git clone command there are no errors, hence a 0 exit code. For my program, I used two variables, temp and CP, as in class path. The standard output for the git clone command is "Cloning into 'student-submission'...".  There are no errors present for the clone command. mkdir temp, or in this case mkdir student-grade/ will create a new directory student-grade/ for usage for the code. The cp commands that I use for the next 4 lines of code will copy files or directories, and if successful will return an exit code of 0. 
+Next we ran TestListExamples and redirect output to test-result.txt. Then another if statement, if the value of $? is a 0, then it will print that the JUnit results are the contents of the test-results.txt, which we redirected before, and that everything is successful with a grade 100%. otherwise then the code will get a 50% grade and an exit code of 1. For the trace that we are doing, the value is a 0, hence gotten a grade of 100%, and the exit code remains a 0 which is a success.
 
-The javac and java command will compile and execute the JUnit program. For my code, it all ran smoothly, with no errors. While executing the java command, there is a error re-direction, or error-output.txt, however since it ran smoothly we did not see it. Then we compile ListExamples.java. The standard outputs given by the program are :
 ```
+Cloning into 'student-submission'...
+Finished cloning
+Found the file!
+Compiled successfully
+JUnit results for the tests are below:
 JUnit version 4.13.2
-.E
-Time: 0.115
-There was 1 failure:
-1) testTimeout(TestListExamples)
-org.junit.runners.model.TestTimedOutException: test timed out after 100 milliseconds
-        at TestListExamples.testTimeout(TestListExamples.java:7)
+..
+Time: 0.021
 
-FAILURES!!!
-Tests run: 1,  Failures: 1
+OK (2 tests)
+
+Grade: 100%
 ```
-There are no standard errors in the file error-output.txt, everything ran smoothly. Next, the if statement will determine the statements being prints. If the exit code is a 0, then it will give a standard output, or print "It was a success", any other number than a 0, is a failure and will give a standard output or print "It was a failure".
+Everything ran smoothly and the file out-error.txt is empty. The standard output has an exit code of 0, which indicates that everything ran smoothly. Everything printed indicates all ran smoothly, and that for the last 2 if statements, the trace runs the first condition for both.
