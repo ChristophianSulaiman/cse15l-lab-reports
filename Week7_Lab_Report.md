@@ -8,47 +8,53 @@ We can do this in under 30 key presses by doing these individual key-presses (us
 
 I will be explaining what each shortcut does.
 
-`Vim DocSearchServer.java` (For this, we will be entering the normal mode for the vim of DocSearchServer.java)
+(Sequence of key presses based on the comment on my previous submission without explanation yet)
 
-`<Enter>`
+1. `Vim DocSearchServer.java`
 
-`/start` (This command is used to search through the file DocSearchServer for any "start" in it)
+2. `<Enter>`
 
-`<Enter>`
+3. `/start`
 
-`ce` (This command is used to delete the word your editing cursor is at (which in this case will be "start"))
+4. `<Enter>`
 
-`I (insert)` (This is to enter insert mode in VIM)
+5. `ce`
 
-`Type “base”` (Here we are just typing the replacement word)
+6. `I`
 
-`<esc>` (esc to go back to normal mode)
+7. `"base"`
 
-`n` (n is to cycle through the word "start" again, from top to bottom)
+8. `<esc>`
 
-`ce`
+9. `n`
 
-`Insert(I)`
+10. `ce`
 
-`Type “base”`
+11. `I`
 
-`<esc>`
+12. `"base"`
 
-`n`
+13. `<esc>`
 
-`ce`
+14. `n`
 
-`Insert(I)`
+15. `ce`
 
-`Type “base”`
+16. `I`
 
-`<esc>`
+17. `"base"`
 
-`:wq` (this is to save and exit the vim file)
+18. `<esc>`
 
-`<Enter>`
+19. `:wq`
 
-This is 19 total key presses, which is reduced significantly using some useful vim shortcuts.
+20. `<Enter>`
+
+This is a total of 20 key presses, using the vim shorcuts!
+
+(Changes made based on feedback, seperated the key presses with the explanation, key presses on top and explanation at the bottom)
+
+So firstly, we will use vim to edit DocSearchServer.java, by typing "vim DocSearchServer.java" (this will automatically make you in vim normal mode), and then just `<enter>` to execute the command. Next, by typing '/start' we are searching through the file for the word "start", and we `<enter>` to start the search. Your cursor will automatically be on the first "start" that is in the file. Then we type 'ce', which deletes the word your editing cursor is at (which in this case will be "start"), this only works in normal mode. Then we press 'i' to enter to Insert mode again in the vim. Then type 'base' to replace the 'start' we just deleted. After that, press the `<esc>` key to go back to Normal Mode in vim, and press the key 'n' to cycle through the next "start". Repeat the steps 5-9 until all the "start"s we want to replace has been replaced with "base", and then `<esc>` key to go back to normal mode. Lastly to exit and save from the vim mode, type ':wq' and `<Enter>`.
 
 
 
